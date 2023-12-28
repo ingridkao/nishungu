@@ -463,7 +463,7 @@ footer {
   font-family: 'Nunito Sans', 'Noto Serif TC',sans-serif;
   font-weight: 400;
   z-index: 1;
-  background: url("../../tiny_pic/00.header.footer/footer_bg_1920_v2.png")no-repeat;
+  background: url("../tiny_pic/00.header.footer/footer_bg_1920_v2.png");
   background-size: cover;
 
 
