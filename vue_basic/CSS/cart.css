@@ -1,0 +1,18 @@
+.cart-title {
+    font-size: 44px;
+    color: #2b2b2b;
+    font-family: 'Noto Serif TC', serif;
+    text-align: center;
+    text-decoration: none;
+    border: 0px solid #000;
+    background-color: #C3998B;
+
+}
+
+.col-9 {
+    background-color: #aaa;
+}
+
+.col-3 {
+    background-color: #faa;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+
+    <style>
+        .v-enter-active,
+.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
+}
+
+.v-enter-to,
+.v-leave-from {
+    opacity: 1;
+}
+    </style>
+</head>
+<body>
+
+<!-- div#app  快捷鍵-->
+<div id="app">
+    <p v-if="name === 'lyn'">1</p>
+    <p v-else-if="name === 'ss'">2</p>
+    <p v-else>3</p>
+
+    <button v-if="open">on</button>
+    <button v-else>off</button>
+    <button>
+        {{open? 'on': 'off'}} 
+    </button>
+
+
+    <!-- <li @click="toggle = !toggle">
+            <h3>講師的教學風格是怎樣的？</h3>
+        <p v-if="toggle">
+            講師的教學風格以生動互動、案例分析為主，激發學生學習興趣。
+        </p>
+    </li> -->
+    <div>
+        <h3 @click="toggle = 1">講師的教學風格是怎樣的？</h3>
+        <transition>
+            <p v-show="toggle == 1">
+                講師的教學風格以生動互動、案例分析為主，激發學生學習興趣。
+            </p>
+        </transition>
+        </div>
+
+    <div>
+        <h3 @mouseOver="toggle = 2">什麼????</h3>
+        <transition>
+            <p v-show="toggle == 2">
+                講師的教學風格以生動互動、案例分析為主，激發學生學習興趣。
+            </p>
+        </transition>
+        </div>
+
+    <div>
+        <h3 @mouseOver="toggle = 3">什麼????</h3>
+        <transition>
+            <p v-show="toggle == 3">
+                <!-- 'v-show' 跟 'v-if' 效果差不多, 但'v-show'會比較節省效能 -->
+                講師的教學風格以生動互動、案例分析為主，激發學生學習興趣。
+            </p>
+        </transition>
+    </div>
+</div>
+
+<script>
+    var open = false
+    console.log(open? 'on': 'off');
+
+    var name ='lyn'
+    if(name === 'lyn'){
+        console.log('1');
+    }else if(name === 'ss'){
+        console.log('2');
+    }else {
+        console.log('3');
+    }
+
+    
+</script>
+
+
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    // console.log(Vue)  //確認有引入
+
+    //新增一個應用application→建立Vue實體(instance)，並掛載(mount)在網頁結點上
+    //創建一個 app 應用,渲染在 div 名為 #app
+    Vue.createApp({
+        data(){
+            return {
+                name: 'lyn',
+                open: false,
+                toggle: 1,
+            }
+        }
+    }).mount('#app') //要分 class 和 id, 但盡量都是用id
+</script>
+</body>
+</html>

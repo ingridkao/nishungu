@@ -1,0 +1,354 @@
+#list-container {
+    margin-top: 80px;
+
+    @media ( width <= 768px ) {
+        margin-top: 50px;
+    }
+}
+
+.products-banner {
+    /* margin-top: 20px; */
+    width: 100%;
+    display: flex;
+    position: relative;
+    /* right: 0; */
+    /* top: 150px; */
+    /* background-color: #faa; */
+
+    .products-banner-img {
+        width: 70%;
+        display: flex;
+        position: relative;
+        order: 1;
+        z-index: 0;
+    
+        /* background-color: #aaa; */
+
+        @media ( width <= 450px ) {
+            margin-top: 10px;
+            width: 65%;
+        }
+    }
+
+    .products-banner-img img {
+        width: 100%;
+        border-radius: 50px 0 0 100px;
+        box-shadow: -30px 25px #D6BEA8;
+
+        @media ( width <= 768px ) {
+            border-radius: 30px 0 0 50px;
+            box-shadow: -20px 20px #D6BEA8;
+        }
+        @media ( width <= 450px ) {
+            border-radius: 20px 0 0 30px;
+            box-shadow: -10px 15px #D6BEA8;
+        }
+    }
+
+    .products-main-title {
+        width: 30%;
+        height: 70%;
+        border-radius: 5px;
+
+        font-family: 'Segoe Script', 'Noto Serif TC', serif;
+        color: #000;
+        /* background-image: linear-gradient(to left, rgba(200, 200, 200, 0.3), rgba(255, 255, 255, 0)); */
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        position: relative;
+        top: 100px;
+        order: 0;
+        z-index: -1;
+
+        @media ( width <= 768px ) {
+            top: 70px;
+        }
+        @media ( width <= 450px ) {
+            width: 35%;
+            top: 40px;
+            
+        }
+
+        /* 標題-商品總覽 */
+        .products-title h1 {
+            font-size: 32px;
+            letter-spacing: 2px;
+            /* background-color: #faa; */
+
+            @media ( width <= 1200px ) {
+                font-size: clamp( 22px, 2.666vw, 32px );
+            }
+            @media ( width <= 450px ) {
+                letter-spacing:1px;
+            }
+            
+        }
+
+        .bottom-line {
+            width: 100%;
+            height: 1px;
+            margin: 20px 0;
+            background-color: #aaa;
+            /* background-image: linear-gradient(to right, #000, #fff); */
+            /* display: inline-block; */
+            /* border-bottom: 1px solid #aaa; */
+
+            @media ( width <= 768px ) {
+                margin: 10px 0;
+            }
+        }
+
+        /* 賦標題-Products */
+        .products-sub-title h2 {
+            font-size: 28px;
+            letter-spacing: 10px;
+            color: #777;
+            /* background-color: #faa; */
+
+            @media ( width <= 1200px ) {
+                font-size: clamp( 20px, 2.333vw, 28px );
+            }
+            @media ( width <= 768px ) {
+                letter-spacing: 8px;
+            }
+            @media ( width <= 450px ) {
+                letter-spacing:5px;
+            }
+        }
+
+        .products-sub-title span {
+            /* color: #eee; */
+        }
+    }
+}
+
+#products-sidebar {
+    /* background-color: #faa; */
+
+    @media ( width <= 768px ) {
+        display: none;
+    }
+
+    .selection {
+        width: 100%;
+        line-height: 54px;
+        position: sticky;
+        top: 200px;
+        z-index: 1;
+        /* background-color: #faa; */
+        font-family: 'Karla', 'Noto Serif TC',sans-serif;
+    
+    }
+    
+    .selection a {
+        width: 100%;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        text-decoration-color: #f000;
+        color: #2B2B2B;
+        line-height: 70px;
+        font-weight: 200;
+        transition: .5s;
+        /* background-color: #faa; */
+    
+    
+        @media ( width <= 1200px ) {
+            margin-left: auto;
+        }
+    }
+    
+    .selection a img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    @media ( width <= 1200px ) {
+        /* 1200px 商品選單前的裝飾線 */
+        .selection a:nth-child(2):before{
+            content: '';
+            width:25px;
+            height: 1px;
+            /* color: #aaa; */
+            background-color: #aaa;
+    
+        }
+        .selection a:nth-child(3):before{
+            content: '';
+            width:25px;
+            height: 1px;
+            /* color: #aaa; */
+            background-color: #aaa;
+        }
+        .selection a:nth-child(4):before{
+            content: '';
+            width:25px;
+            height: 1px;
+            color: #aaa;
+            background-color: #aaa;
+        }
+    
+    }
+    
+    
+    .selection a img {
+        margin-right: 10px;
+        
+    }
+    .selection a:hover {
+        /* text-decoration-color: #aaa; */
+    }
+    
+    .selection a #img-hover {
+        display: none;
+        transition: opacity 0.5s;
+    }
+    .selection a:hover #normal-img {
+        display: none;
+        opacity: 0;
+    }
+    .selection a:hover #img-hover {
+        display: block;
+        opacity: 1;
+    }
+    
+    .selection h2 {
+        width: 50%;
+        height: 55px;
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+        text-align: center;
+        /* background-color: #faa; */
+        /* margin-left: 40px; */
+        
+    
+        @media ( width <= 1200px ) {
+            font-size: clamp( 18px, 1.666vw, 20px );
+            /* margin-left: auto; */
+        }
+    }
+    
+    .selection p {
+        font-size: 18px;
+    
+        @media ( width <= 1200px ) {
+            font-size: clamp( 16px, 1.5vw, 18px );
+            /* margin-left: auto; */
+        }
+    }
+    .selection a span {
+        font-size: 1.8ex;
+        font-weight: 400;
+    }
+    
+}
+
+.
+.card-products {
+    width: 90%;
+    margin: auto;
+    /* background-color: #bbb; */
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+/* 商品標題-漢服 */
+.card-title {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #aaa;
+    margin: 20px 0;
+    
+    font-size: 28px;
+    color: #2B2B2B;
+    font-family: 'Segoe Script', 'Noto Serif TC', serif;
+    
+    display: flex;
+    align-items: center;
+
+    @media ( width <= 1200px ) {
+        font-size: clamp( 24px, 2.333vw, 28px );
+    }
+    @media ( width <= 768px ) {
+        padding-bottom: 10px;
+        margin: 10px 0;
+    }
+}
+
+.card-title img {
+    width: 70px;
+
+    @media ( width <= 768px ) {
+        width: 40px;
+    }
+
+}
+
+.card-title p {
+    margin-left: 10px;
+}
+
+.card-title span {
+    margin-left: 3px;
+    font-size: 1.3ex;
+}
+
+.card-text {
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+
+    @media ( width <= 1200px ) {
+        font-size: clamp( 14px, 1.5vw, 18px );
+    }
+    @media ( width <= 768px ) {
+        line-height: 25px;
+    }
+}
+
+
+.card-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-item {
+    width: 30%;
+    margin: 0 auto 40px;
+}
+.card-items img {
+    width: 100%;
+}
+.item-text {
+    border-top: 1px solid #aaa;
+    padding: 10px 0 0 10px;
+    margin-top: 10px;
+
+    font-size: 18px;
+    color: #2B2B2B;
+    line-height: 30px;
+
+    @media ( width <= 1200px ) {
+        font-size: clamp( 16px, 1.5vw, 18px );
+        line-height: 20px;
+    }
+}
+
+.item-text  {
+    text-decoration-color: #f000;
+    font-size: 18px;
+    color: #2B2B2B;
+    transition: .5s;
+
+    @media ( width <= 1200px ) {
+        font-size: clamp( 16px, 1.5vw, 18px );
+    }
+}

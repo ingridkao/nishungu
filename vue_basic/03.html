@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+<!-- div#app  快捷鍵-->
+<div id="app">
+
+        <div class="card-items">
+            <div  v-for="item in list" 
+                class="card-item"
+                :style="{
+                    'background-color': '#aaa',
+                }">
+                <div class="item-img">
+                    <a href="https://lyn-green.github.io/CHD104/NiShangGe/NiShangGe-product.html">
+                        <img :src="item.image" :alt="item.name">
+                    </a>
+                </div>
+                <div class="item-text">
+                    <a href="https://lyn-green.github.io/CHD104/NiShangGe/NiShangGe-product.html">
+                    <span> {{item.name}} </span>
+        
+                    <p> {{item.price}} </p>
+            </div>
+        </div>
+
+
+
+
+    <!-- <p v-for="(listItem, listIndex) in list">
+        {{ listIndex + 1}}. {{listItem}}
+        'listItem' 這是自訂的名稱
+    </p>  -->
+
+</div>
+
+
+<script>
+    //v-for
+    //for loops
+    var array = [1, 2, 3, 4, 5]
+    //let index = 0;順序從 0 開始
+    //index < array.length;
+    // index++
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        // console.log(element);
+        
+    }
+    //會產出跟上面一樣的
+    //for of loop
+    for (const iterator of array) {
+        console.log(iterator);
+        
+    }
+</script>
+
+
+
+
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    Vue.createApp({
+        data(){
+            return {
+                list: [
+                
+    {
+        "image": "../tiny_pic/02.list/list_item_01.jpg" ,
+        "name": "青染白綾 | Blue-dyed White Silk",
+        "price": "NT$ 4,599",
+        "link": "https://lyn-green.github.io/CHD104/NiShangGe/NiShangGe-product.html"
+    },
+    {
+        "image": "../tiny_pic/02.list/list_item_02.jpg",
+        "name": "映日紅 | Sunlit Red",
+        "price": "NT$ 5,999",
+        "link": "#"
+    },
+    {
+        "image": "../tiny_pic/02.list/list_item_03.jpg",
+        "name": "玄燭 | Mysterious Candle",
+        "price": "NT$ 6,299",
+        "link": "#"
+    },
+    {
+        "image": "../tiny_pic/02.list/list_item_04.jpg",
+        "name": "竹間漫步 | Strolling Amidst Bamboo",
+        "price": "NT$ 4,299",
+        "link": "#"
+    },
+    {
+        "image": "../tiny_pic/02.list/list_item_05.jpg",
+        "name": "春色綺白 | Spring Colors, Elegant White",
+        "price": "NT$ 3,999",
+        "link": "#"
+    },
+    {
+        "image": "../tiny_pic/02.list/list_item_06.jpg",
+        "name": "明月映影 | Bright Moon Reflecting Shadows",
+        "price": "NT$ 3,499",
+        "link": "#"
+    }
+
+
+                ],
+
+            }
+        },
+    }).mount('#app')
+</script>
+
+
+</body>
+<!--  -->
+</html>

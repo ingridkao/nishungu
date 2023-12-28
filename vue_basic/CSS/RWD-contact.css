@@ -1,0 +1,80 @@
+
+
+/* @media ( width > 768px) {
+    .nav-bar {
+        display: none;
+    }
+} */
+
+font-size: clamp( 16px, 1.5vw, 18px );
+font-size: clamp( 18px, 1.666vw, 20px );
+font-size: clamp( 18px, 1.833vw, 22px );
+font-size: clamp( 18px, 2vw, 24px );
+font-size: clamp( 24px, 2.333vw, 28px );
+font-size: clamp( 24px, 2.666vw, 32px );
+@media ( width <= 768px ) {
+    
+}
+@media ( width <= 1200px ) {
+    
+}
+@media ( width <= 1200px ) {
+    font-size: clamp( 28px, 3.333vw, 40px );
+}
+@media ( width <= 1200px ) {
+    margin-left: 150px;
+    margin-right: 70px;
+    font-size: clamp( 28px, 3.333vw, 40px );
+}
+@media ( width <= 1024px ) {
+    margin-left: 190px;
+    /* margin-right: 0px; */
+    /* font-size: clamp( 32px, 3.333vw, 40px ); */
+}
+@media ( width <= 768px ) {
+    width: 50%;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    line-height: 60px;
+}
+
+font-size: clamp( 18px, 2vw, 24px );
+
+@media ( width <= 450px ) {
+    width: 50%;
+    margin: 250px auto 0;
+}
+
+
+url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg")
+
+font-family: 'Karla', 'Noto Serif TC',sans-serif;
+
+
+/* sidebar */
+.selection h2 {
+    width: 50%;
+    height: 55px;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+    /* background-color: #faa; */
+    /* margin-left: 40px; */
+    
+
+    @media ( width <= 1200px ) {
+        font-size: clamp( 18px, 1.666vw, 20px );
+        /* margin-left: auto; */
+    }
+}
+
+.selection p {
+    font-size: 18px;
+
+    @media ( width <= 1200px ) {
+        font-size: clamp( 16px, 1.5vw, 18px );
+        /* margin-left: auto; */
+    }
+}

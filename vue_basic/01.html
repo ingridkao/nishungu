@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+<body>
+
+<!-- div#app  快捷鍵-->
+<div id="app">
+    <!-- 用 <p> 來做分行 -->
+    <p>{{ count }}</p> 
+
+    <!-- 要注意數值與字串,否則加總會出錯 -->
+    <p>{{ pie + count }}</p>
+
+    <p>{{ isPeople + count }}</p>
+
+    <p> {{ list.length }} </p>
+    <p> {{ list[0] }} </p>
+    <p> {{ list[list.length - 1] }} </p> 
+
+    <p>{{ info }}</p>
+    <p>{{ info['name'] }}</p> 
+    <p>{{ info.name }}</p>
+    <p>{{ info.age }}</p>
+    <p>{{ info.isLive }}</p>
+    <p>{{ info.hello('hey.hey') }}</p>
+    <!-- 調用function 要記得加上 () -->
+
+</div>
+
+
+
+
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    // console.log(Vue)  //確認有引入
+
+    //新增一個應用application→建立Vue實體(instance)，並掛載(mount)在網頁結點上
+    //創建一個 app 應用,渲染在 div 名為 #app
+    Vue.createApp({
+        data(){
+            return {
+                count: 10, //num
+                pie: 3.14, //浮點值
+                isPeople: true, //布林
+                list: [1, 2, 3, 4, 5], //陣列
+                info: {
+                    name: 'Lyn',
+                    age: 26,
+                    isLive: true,
+                    hello(str){
+                        return 'hi' + str
+                    }
+                }
+            }
+        },
+    }).mount('#app') //要分 class 和 id, 但盡量都是用id
+</script>
+</body>
+</html>

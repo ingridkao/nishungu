@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+<body>
+
+<!-- div#app  快捷鍵-->
+<div id="app">
+    <p v-for="(listItem, listIndex) in list">
+        {{ listIndex + 1}}. {{listItem}}
+        <!-- 'listItem' 這是自訂的名稱 -->
+    </p> 
+
+</div>
+
+
+<script>
+    //v-for
+    //for loops
+    var array = [1, 2, 3, 4, 5]
+    //let index = 0;順序從 0 開始
+    //index < array.length;
+    // index++
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        // console.log(element);
+        
+    }
+    //會產出跟上面一樣的
+    //for of loop
+    for (const iterator of array) {
+        console.log(iterator);
+        
+    }
+</script>
+
+
+
+
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    Vue.createApp({
+        data(){
+            return {
+                list: ['A', 'B', 'C', 'D', 'E'],
+
+            }
+        },
+    }).mount('#app')
+</script>
+
+
+</body>
+</html>
